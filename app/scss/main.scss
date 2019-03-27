@@ -72,7 +72,7 @@ h1 {
 	height: 100vh;
 	background-size: cover;
 	background-position: 0;
-	position: absolute;
+	position: relative;
 	top: 0;
 }
 .header::after {
@@ -86,9 +86,8 @@ h1 {
 	z-index: -1;
 }
 .container {
-	margin-top: 20px;
 	display: grid;
-	grid-template-rows: 10% 1fr 1fr;
+	grid-template-rows: 10% 20% 75%;
 }
 .menu {
 	display: grid;
@@ -147,11 +146,11 @@ h1 {
 	width: 770px;
 }
 .video_btn {
-	padding: 5px 20px 5px 40px;
+	padding: 10px 30px 10px 50px;
 	background-image: url(../img/playicon.png);
 	background-repeat: no-repeat;
 	background-size: 10px;
-	background-position: 18px 10px;
+	background-position: 22px 14px;
 	border: 1px solid #d0d0d0;
 	border-radius: 15px;
 	font-size: 16px;
@@ -161,5 +160,29 @@ h1 {
 	opacity: 1;
 	color: $links;
 }
+.header_phone {
+	background-repeat: no-repeat;
+	width: 369px;
+	height: 753px;
+	align-self: center;
+    justify-self: center;
+}
 
+.features {
+	background-color: #fff;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    color: #000;
+    display: block;
+    position: relative;
+}
+
+.product {
+	background-color: orange;
+    width: 100%;
+    height: 500px;
+    color: #000;
+    display: block;
+}
 @import "media"; // Always at the end
