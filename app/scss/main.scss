@@ -57,19 +57,37 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	opacity: 0.4;
 	color: $links;
 }
 p {
 	color: $text;
+	font-size: 20px;
 }
 h1 {
 	font-family: 'Varela Round', sans-serif;
 }
-
+h2 {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 42px;
+	color: $links;
+}
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 26px;
+}
+.btn_accent {
+	background-color: $accent;
+	border-radius: 15px;
+}
+.btn_addition {
+	background-color: #6fc754;
+	border-radius: 15px;
+}
+/*************End of the important styles ******************/
 .header {
 	width: 100%;
-	height: 100vh;
+	height: 1000px;
 	background-size: cover;
 	background-position: 0;
 	position: relative;
@@ -115,8 +133,6 @@ h1 {
 	grid-template-columns: 1fr 1fr 40%;
 }
 .menu_right_menu_item:last-child {
-	background-color: $accent;
-	border-radius: 15px;
 	padding: 5px 20px 5px 40px;
 	color: #fff;
 	background-image: url(../img/applelogo.png);
@@ -124,7 +140,10 @@ h1 {
 	background-size: 17px;
 	background-position: 15px 7px;
 }
-
+.menu_right_menu_item:hover,
+.menu_left_menu_item:hover {
+	opacity: 0.4;
+}
 
 .mainTitle {
 	margin-top: 60px;
@@ -138,6 +157,7 @@ h1 {
 	h1 {
 		font-size: 62px;
 		color: $links;
+		margin-bottom: 80px;
 	}
 }
 .mainTitle__paragraph {
@@ -171,18 +191,89 @@ h1 {
 .features {
 	background-color: #fff;
     width: 100%;
-    height: 500px;
+    height: 600px;
     z-index: 2;
     color: #000;
     display: block;
     position: relative;
 }
 
-.product {
-	background-color: orange;
+.features_grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: left;
+	align-items: center;
+	grid-gap: 25px;
+	height: 600px;
+}
+.first_feature__icon,
+.second_feature__icon {
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 52px;
+	margin-bottom: 10px;
+}
+.feature__first,
+.feature__second {
+	height: 100%;
+	margin-top: 50%;
+	align-self: center;
+
+	h3 {
+		margin-bottom: 30px;
+	}
+	p {
+		font-size: 18px;
+	}
+}
+
+.phone_feature {
+	background-repeat: no-repeat;
+	background-position: -100px center;
     width: 100%;
-    height: 500px;
-    color: #000;
-    display: block;
+	height: 900px;
+	display: block;
+	position: relative;
+	.container {
+		display: block;
+		position: relative;
+		height: 100%;
+	}
+}
+.phone_feature_right_info {
+	position: absolute;
+	top: 20%;
+	right: 0;
+	height: 100%;
+	h2 {
+		margin-bottom: 70px;
+	}
+	p {
+		width: 470px;
+	}
+	p:first-child {
+		margin-bottom: 30px;
+	}
+	
+}
+
+.btns_block {
+	margin-top: 80px;
+	.phone_feature_right_info__btn_accent {
+		background-image: url(../img/small_arrow.png);
+		background-position: 160px 19px;
+		background-repeat: no-repeat;
+		padding: 13px 80px 13px 23px;
+		color: #fff;
+	}
+	.phone_feature_right_info__btn_addition {
+		padding: 13px 30px;
+		border: 1px solid #e9e9ea;
+		background-color: rgba(255,255,255,0.4);
+		transition: all 0.5s ease-in-out 1ms;
+	}
+	.phone_feature_right_info__btn_addition:hover {
+		background-color: rgba(255,255,255,0.9);
+	}
 }
 @import "media"; // Always at the end
