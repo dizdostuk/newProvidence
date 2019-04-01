@@ -3,277 +3,360 @@
 @import "libs";
 
 ::placeholder {
-	color: #666;
+  color: #666;
 }
 
 ::selection {
-	background-color: $accent;
-	color: #fff;
+  background-color: $accent;
+  color: #fff;
 }
 
 body {
-	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-	font-family: $default-font;
-	overflow-x: hidden;
-	color: $text;
-	input, textarea {
-		border: #666 1px solid;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
-	}
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $text;
+  input,
+  textarea {
+    border: #666 1px solid;
+    outline: none;
+    &:focus:required:invalid {
+      border-color: red;
+    }
+    &:required:valid {
+      border-color: green;
+    }
+  }
 }
 
 .img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
-		width: 100%;
-	}
+  display: block;
+  max-width: 100%;
+  height: auto;
+  &.img-width {
+    width: 100%;
+  }
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
-b, strong {
-	font-weight: bold;
+b,
+strong {
+  font-weight: bold;
 }
-a, p {
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	font-size: 16px;
+a,
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 a {
-	color: $links;
+  color: $links;
 }
 a:hover {
-	text-decoration: none;
-	color: $links;
+  text-decoration: none;
+  color: $links;
 }
 p {
-	color: $text;
-	font-size: 20px;
+  color: $text;
+  font-size: 20px;
 }
 h1 {
-	font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 h2 {
-	font-family: 'Varela Round', sans-serif;
-	font-size: 42px;
-	color: $links;
+  font-family: "Varela Round", sans-serif;
+  font-size: 42px;
+  color: $links;
 }
 h3 {
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	font-size: 26px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
 }
 .btn_accent {
-	background-color: $accent;
-	border-radius: 15px;
+  background-color: $accent;
+  border-radius: 15px;
 }
 .btn_addition {
-	background-color: #6fc754;
-	border-radius: 15px;
+  background-color: #6fc754;
+  border-radius: 15px;
 }
 /*************End of the important styles ******************/
 .header {
-	width: 100%;
-	height: 1000px;
-	background-size: cover;
-	background-position: 0;
-	position: relative;
-	top: 0;
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-position: 0;
+  position: relative;
+  top: 0;
 }
 .header::after {
-	content: '';
-	background: #fff;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.4;
-	z-index: -1;
+  content: "";
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
 }
 .container {
-	display: grid;
-	grid-template-rows: 10% 20% 75%;
+  display: grid;
+  grid-template-rows: 10% 20% 75%;
 }
 .menu {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 .menu__left_menu,
-.menu__right_menu{
-	display: grid;
-	justify-items: center;
-	grid-column-gap: 45px;
-	align-items: center;
+.menu__right_menu {
+  display: grid;
+  justify-items: center;
+  grid-column-gap: 45px;
+  align-items: center;
 }
 .menu__left_menu {
-	grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .menu__logo {
-	background-image: url(../img/logo.png);
-	background-repeat: no-repeat;
-	background-position: 0;
-	width: 155px;
-	height: auto;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  width: 155px;
+  height: auto;
 }
 .menu__right_menu {
-	grid-template-columns: 1fr 1fr 40%;
+  grid-template-columns: 1fr 1fr 40%;
 }
 .menu_right_menu_item:last-child {
-	padding: 5px 20px 5px 40px;
-	color: #fff;
-	background-image: url(../img/applelogo.png);
-	background-repeat: no-repeat;
-	background-size: 17px;
-	background-position: 15px 7px;
+  padding: 5px 20px 5px 40px;
+  color: #fff;
+  background-image: url(../img/applelogo.png);
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 15px 7px;
 }
 .menu_right_menu_item:hover,
 .menu_left_menu_item:hover {
-	opacity: 0.4;
+  opacity: 0.4;
 }
 
 .mainTitle {
-	margin-top: 60px;
-	display: grid;
-	grid-template-rows: 10% 1fr 10%;
-	align-items: center;
-	justify-items: center;
-	grid-row-gap: 15px; 
+  margin-top: 60px;
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 15px;
 }
 .mainTitle__title {
-	h1 {
-		font-size: 62px;
-		color: $links;
-		margin-bottom: 80px;
-	}
+  h1 {
+    font-size: 62px;
+    color: $links;
+    margin-bottom: 80px;
+  }
 }
 .mainTitle__paragraph {
-	align-self: center;
-	text-align: center;
-	width: 770px;
+  align-self: center;
+  text-align: center;
+  width: 770px;
 }
 .video_btn {
-	padding: 10px 30px 10px 50px;
-	background-image: url(../img/playicon.png);
-	background-repeat: no-repeat;
-	background-size: 10px;
-	background-position: 22px 14px;
-	border: 1px solid #d0d0d0;
-	border-radius: 15px;
-	font-size: 16px;
-	
+  padding: 10px 30px 10px 50px;
+  background-image: url(../img/playicon.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 22px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 15px;
+  font-size: 16px;
 }
 .video_btn:hover {
-	opacity: 1;
-	color: $links;
+  opacity: 1;
+  color: $links;
 }
 .header_phone {
-	background-repeat: no-repeat;
-	width: 369px;
-	height: 753px;
-	align-self: center;
-    justify-self: center;
+  background-repeat: no-repeat;
+  width: 369px;
+  height: 753px;
+  align-self: center;
+  justify-self: center;
 }
 
 .features {
-	background-color: #fff;
-    width: 100%;
-    height: 600px;
-    z-index: 2;
-    color: #000;
-    display: block;
-    position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 600px;
+  z-index: 2;
+  color: #000;
+  display: block;
+  position: relative;
 }
 
 .features_grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-content: left;
-	align-items: center;
-	grid-gap: 25px;
-	height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
+  align-items: center;
+  grid-gap: 25px;
+  height: 600px;
 }
 .first_feature__icon,
 .second_feature__icon {
-	background-repeat: no-repeat;
-	width: 42px;
-	height: 52px;
-	margin-bottom: 10px;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 52px;
+  margin-bottom: 10px;
 }
 .feature__first,
 .feature__second {
-	height: 100%;
-	margin-top: 50%;
-	align-self: center;
+  height: 100%;
+  margin-top: 50%;
+  align-self: center;
 
-	h3 {
-		margin-bottom: 30px;
-	}
-	p {
-		font-size: 18px;
-	}
+  h3 {
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 .phone_feature {
-	background-repeat: no-repeat;
-	background-position: -100px center;
-    width: 100%;
-	height: 900px;
-	display: block;
-	position: relative;
-	.container {
-		display: block;
-		position: relative;
-		height: 100%;
-	}
+  background-repeat: no-repeat;
+  background-position: -100px center;
+  width: 100%;
+  height: 900px;
+  display: block;
+  position: relative;
+  .container {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
 }
 .phone_feature_right_info {
-	position: absolute;
-	top: 20%;
-	right: 0;
-	height: 100%;
-	h2 {
-		margin-bottom: 70px;
-	}
-	p {
-		width: 470px;
-	}
-	p:first-child {
-		margin-bottom: 30px;
-	}
-	
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 100%;
+  h2 {
+	margin-bottom: 70px;
+	width: 235px;
+  }
+  p {
+    width: 470px;
+  }
+  p:first-child {
+    margin-bottom: 30px;
+  }
 }
 
 .btns_block {
-	margin-top: 80px;
-	.phone_feature_right_info__btn_accent {
-		background-image: url(../img/small_arrow.png);
-		background-position: 160px 19px;
-		background-repeat: no-repeat;
-		padding: 13px 80px 13px 23px;
-		color: #fff;
-	}
-	.phone_feature_right_info__btn_addition {
-		padding: 13px 30px;
-		border: 1px solid #e9e9ea;
-		background-color: rgba(255,255,255,0.4);
-		transition: all 0.5s ease-in-out 1ms;
-	}
-	.phone_feature_right_info__btn_addition:hover {
-		background-color: rgba(255,255,255,0.9);
+  margin-top: 80px;
+  .phone_feature_right_info__btn_accent {
+    background-image: url(../img/small_arrow.png);
+    background-position: 160px 19px;
+    background-repeat: no-repeat;
+    padding: 13px 80px 13px 23px;
+    color: #fff;
+  }
+  .phone_feature_right_info__btn_addition {
+    padding: 13px 30px;
+    border: 1px solid #e9e9ea;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.5s ease-in-out 1ms;
+  }
+  .phone_feature_right_info__btn_addition:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.map_feature {
+  background-repeat: no-repeat;
+  background-position: 500px center;
+  width: 100%;
+  height: 900px;
+  display: block;
+  position: relative;
+  .container {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+}
+.map_feature_left_info {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 100%;
+  h2 {
+	margin-bottom: 70px;
+	width: 235px;
+  }
+  p {
+    width: 470px;
+  }
+  p:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.partners {
+  margin-top: 70px;
+  .partners_headtext {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+	color: #26272d;
+	text-transform: uppercase;
+  }
+  .partners_logo {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 25% 30%;
+    grid-template-rows: 25% 30%;
+    grid-gap: 35px;
+  }
+}
+
+.phone_screens {
+	height: 1200px;
+	width: 100%;
+	background-color: #f5f5f8;
+	text-align: center;
+	display: grid;
+	grid-template-rows: 30% 1fr;
+	justify-content: center;
+	.phone_screens__header_text {
+		text-align: center;
+		margin-top: 145px;
+		display: grid;
+		grid-template-rows: 30% 5% 10%;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 45px;
+		.header_text__line {
+			width: 70px;
+			height: 3px;
+			background-color: $accent;
+			border: 1px solid $accent;
+			border-radius: 3px;
+			justify-self: center;
+		}
+		.header_text__small {
+			font-family: 'Lato', sans-serif;
+			font-weight: bold;
+			color: #8c8f94;
+			text-transform: uppercase;
+		}
 	}
 }
 @import "media"; // Always at the end
