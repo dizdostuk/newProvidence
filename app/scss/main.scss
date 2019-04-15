@@ -512,7 +512,6 @@ h3 {
   .feedback_viewport {
     width: 90%;
     margin: 0 auto;
-    overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -523,14 +522,10 @@ h3 {
 .feedback_sliderwrapper {
   width: 112px;
   height: 112px;
-  position: relative;
   margin: 0 auto;
-  .feedback_slide {
-    width: 112px;
-    height: 112px;
-    display: inline-block;
-    transition: left ease-in-out 1s;
-  }
+  display: flex;
+  overflow: hidden;
+  border: 5px solid rgb(250, 75, 75);
 }
 
 .feedbackslide_btns {
@@ -554,5 +549,7 @@ h3 {
   background-repeat: no-repeat;
   right: 20px;
 }
+
+
 
 @import "media"; // Always at the end
