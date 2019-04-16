@@ -101,15 +101,13 @@ let counter = 1;
 let feedBtn = 0;
 
 const nextFeedback = () => {
-  if(counter === carouselImages.length) {
-    carouselImages[0].classList.add('feedback_active_img');
-    deleteOverlay[0].classList.remove('feedback_overlay');
-  }
   //Remove scale and add overlay
   carouselImages[counter-1].classList.remove('feedback_active_img');
   deleteOverlay[counter-1].classList.add('feedback_overlay');
 
   if(counter === carouselImages.length) {
+    carouselImages[0].classList.add('feedback_active_img');
+    deleteOverlay[0].classList.remove('feedback_overlay');
     counter = 1;
   } else {
     carouselImages[counter].classList.add('feedback_active_img');
@@ -119,5 +117,17 @@ const nextFeedback = () => {
 }
 
 const prevClick = () => {
+  if(counter === 1) {
+    counter = 3;
+  }
+  counter--;
+  carouselImages[counter+1].classList.remove('feedback_active_img');
+  deleteOverlay[counter+1].classList.add('feedback_overlay');
+
+  if(feedBtn + 1 != counter) {
+    carouselImages[counter-1].classList.add('feedback_active_img');
+    deleteOverlay[counter-1].classList.remove('feedback_overlay');
+  }
   
 }
+prevBtn.addEventListener('click', prevClick);
