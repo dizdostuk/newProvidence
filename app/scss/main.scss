@@ -524,8 +524,12 @@ h3 {
   height: 112px;
   margin: 0 auto;
   display: flex;
-  overflow: hidden;
+  flex-direction: row;
   border: 5px solid rgb(250, 75, 75);
+}
+.feedback_slide {
+  width: 112px;
+  height: 112px;
 }
 
 .feedbackslide_btns {
