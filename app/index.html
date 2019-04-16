@@ -217,9 +217,19 @@
     <div class="feedbacks">
       <div class="feedback_viewport">
         <div class="feedback_sliderwrapper">
-          <img src="img/feedback1.png" alt="Feedback1" class="feedback_slide" />
-          <img src="img/feedback2.png" alt="Feedback2" class="feedback_slide" />
-          <img src="img/feedback3.png" alt="Feedback3" class="feedback_slide" />
+          <div class="feedoverlay feedback_active_img">
+            <img src="img/feedback1.png" alt="Feedback1" class="feedback_slide" />
+            <div class="idfordel"></div>
+          </div>
+          <div class="feedoverlay">
+            <img src="img/feedback2.png" alt="Feedback2" class="feedback_slide" />
+            <div class="idfordel feedback_overlay"></div>
+          </div>
+          <div class="feedoverlay">
+            <img src="img/feedback3.png" alt="Feedback3" class="feedback_slide" />
+            <div class="idfordel feedback_overlay"></div>
+          </div>
+          
         </div>
         <div class="feedbackslide_btns">
           <div class="prev_btn"></div>
@@ -238,5 +248,6 @@
         
       </div>
     </div>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
