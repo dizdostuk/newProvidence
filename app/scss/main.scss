@@ -578,7 +578,22 @@ h3 {
   background-repeat: no-repeat;
   right: 20px;
 }
-
-
+// Feedback contents
+.feedback_content1 {
+  margin-top: 70px;
+  text-align: center;
+  h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+  }
+  p {
+    width: 555px;
+    margin: 50px auto;
+  }
+  .feedback_stars {
+    color: #f2bc3b;
+    margin-bottom: 70px;
+  }
+}
 
 @import "media"; // Always at the end
