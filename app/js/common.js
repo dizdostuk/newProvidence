@@ -1,3 +1,7 @@
+/**
+ * Slide for iphone mockups
+ */
+
 let slideNow = 1,
   slideActiveBtnCount = 1,
   slideCount = $("#slidewrapper").children().length,
@@ -5,6 +9,8 @@ let slideNow = 1,
   slideInterval = 4000,
   navBtnId = 0,
   prevClickBtn = 0;
+
+let jsonObject = "";
 
 function nextSlide() {
   let firstSlideBtn = $(".slide_nav_btn").get(0);
@@ -98,7 +104,6 @@ const nextBtn = document.querySelector('.next_btn');
 
 //Counter
 let counter = 0;
-let feedBtn = 0;
 
 const nextFeedback = () => {
   //Remove scale and add overlay
@@ -125,6 +130,7 @@ const prevClick = () => {
     deleteOverlay[deleteOverlay.length-1].classList.remove('feedback_overlay');
 
     counter = carouselImages.length-1;
+    renderFeedbacks(jsonObject);
     return;
   } else {
     carouselImages[counter].classList.remove('feedback_active_img');
@@ -135,6 +141,7 @@ const prevClick = () => {
   deleteOverlay[counter-1].classList.remove('feedback_overlay');
   
   counter--;
+  renderFeedbacks(jsonObject);
 }
 
 const nextClick = () => {
@@ -146,6 +153,7 @@ const nextClick = () => {
     deleteOverlay[0].classList.remove('feedback_overlay');
 
     counter = 0;
+    renderFeedbacks(jsonObject);
     return;
   } else {
     carouselImages[counter].classList.remove('feedback_active_img');
@@ -156,7 +164,63 @@ const nextClick = () => {
   deleteOverlay[counter+1].classList.remove('feedback_overlay');
 
   counter++;
+  renderFeedbacks(jsonObject);
 }
 prevBtn.addEventListener('click', prevClick);
 nextBtn.addEventListener('click', nextClick);
 
+
+const requestUrl = 'https://dizdostuk.github.io/js/feedbacks.json';
+let request = new XMLHttpRequest();
+request.open('GET', requestUrl);
+request.responseType = 'json';
+request.send();
+
+request.onload = () => {
+  jsonObject = request.response;
+  renderFeedbacks(jsonObject);
+}
+
+
+const renderFeedbacks = (obj) => {
+  let title = document.querySelector('.feedback_h2');
+  let paragraph = document.querySelector('.feedback_paragraph');
+  let stars = document.querySelector('.feedback_stars');
+  let author = document.querySelector('.feedback_name_b');
+
+  title.innerHTML = "";
+  paragraph.innerHTML = "";
+  while(stars.firstChild) {
+    stars.removeChild(stars.firstChild);
+  }
+  author.innerHTML = "";
+  let starsIcon = document.createElement('i');
+  starsIcon.classList.add('fa');
+  starsIcon.classList.add('fa-star');
+  console.log(counter)
+  switch(counter+1) {
+    case 1:
+      title.innerHTML = obj.feedback1.feedbackTitle;
+      paragraph.innerHTML = obj.feedback1.feedbackText;
+      for(let i = 0; i < obj.feedback1.feedbackStars; i++) {
+        stars.appendChild(starsIcon);
+      }
+      author.innerHTML = obj.feedback1.feedbackAuthor;
+    case 2:
+      title.innerHTML = obj.feedback2.feedbackTitle;
+      paragraph.innerHTML = obj.feedback2.feedbackText;
+      for(let i = 0; i < obj.feedback2.feedbackStars; i++) {
+        stars.appendChild(starsIcon);
+      }
+      author.innerHTML = obj.feedback2.feedbackAuthor;
+    case 3:
+      title.innerHTML = obj.feedback3.feedbackTitle;
+      paragraph.innerHTML = obj.feedback3.feedbackText;
+      for(let i = 0; i < obj.feedback3.feedbackStars; i++) {
+        stars.appendChild(starsIcon);
+      }
+      author.innerHTML = obj.feedback3.feedbackAuthor;
+    default:
+      return;
+  }
+}
