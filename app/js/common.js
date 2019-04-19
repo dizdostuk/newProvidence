@@ -118,6 +118,7 @@ const nextFeedback = () => {
     carouselImages[counter+1].classList.add('feedback_active_img');
     deleteOverlay[counter+1].classList.remove('feedback_overlay');
     counter++;
+    renderFeedbacks(jsonObject);
   }
 }
 
@@ -197,30 +198,27 @@ const renderFeedbacks = (obj) => {
   let starsIcon = document.createElement('i');
   starsIcon.classList.add('fa');
   starsIcon.classList.add('fa-star');
-  console.log(counter)
-  switch(counter+1) {
-    case 1:
+
+  if(counter === 0) {
       title.innerHTML = obj.feedback1.feedbackTitle;
       paragraph.innerHTML = obj.feedback1.feedbackText;
       for(let i = 0; i < obj.feedback1.feedbackStars; i++) {
         stars.appendChild(starsIcon);
       }
       author.innerHTML = obj.feedback1.feedbackAuthor;
-    case 2:
+  } else if(counter === 1) {
       title.innerHTML = obj.feedback2.feedbackTitle;
       paragraph.innerHTML = obj.feedback2.feedbackText;
       for(let i = 0; i < obj.feedback2.feedbackStars; i++) {
         stars.appendChild(starsIcon);
       }
       author.innerHTML = obj.feedback2.feedbackAuthor;
-    case 3:
+    } else if(counter === 2) {
       title.innerHTML = obj.feedback3.feedbackTitle;
       paragraph.innerHTML = obj.feedback3.feedbackText;
       for(let i = 0; i < obj.feedback3.feedbackStars; i++) {
         stars.appendChild(starsIcon);
       }
       author.innerHTML = obj.feedback3.feedbackAuthor;
-    default:
-      return;
-  }
+    }
 }
