@@ -170,6 +170,9 @@ const nextClick = () => {
 prevBtn.addEventListener('click', prevClick);
 nextBtn.addEventListener('click', nextClick);
 
+/****************************************************************
+ ********************** Request to json file ********************
+ ***************************************************************/
 
 const requestUrl = 'https://dizdostuk.github.io/js/feedbacks.json';
 let request = new XMLHttpRequest();
@@ -222,3 +225,37 @@ const renderFeedbacks = (obj) => {
       author.innerHTML = obj.feedback3.feedbackAuthor;
     }
 }
+
+let toggleUser = document.querySelector('.toggle_user');
+let starterPlan = document.querySelector('.perfect_plan_starter');
+let proPlan = document.querySelector('.perfect_plan_premium');
+let toggled = false;
+
+const togglePlanClass = () => () => {
+  if(toggled === true) {
+    document.querySelector('.company').classList.remove('toggle_user_active');
+    document.querySelector('.perfect_plan_premium').classList.remove('perfect_plan_active');
+    document.querySelector('.buy_pro').classList.remove('plan_buy_now_active');
+
+    document.querySelector('.individual').classList.add('toggle_user_active');
+    document.querySelector('.perfect_plan_starter').classList.add('perfect_plan_active');
+    document.querySelector('.buy_starter').classList.add('plan_buy_now_active');
+
+
+    toggled = false;
+  } else {
+    document.querySelector('.individual').classList.remove('toggle_user_active');
+    document.querySelector('.perfect_plan_starter').classList.remove('perfect_plan_active');
+    document.querySelector('.buy_starter').classList.remove('plan_buy_now_active');
+
+    document.querySelector('.company').classList.add('toggle_user_active');
+    document.querySelector('.perfect_plan_premium').classList.add('perfect_plan_active');
+    document.querySelector('.buy_pro').classList.add('plan_buy_now_active');
+
+    toggled = true;
+  }
+}
+
+toggleUser.addEventListener('click', togglePlanClass());
+starterPlan.addEventListener('click', togglePlanClass());
+proPlan.addEventListener('click', togglePlanClass());
