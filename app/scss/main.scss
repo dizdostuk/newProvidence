@@ -115,6 +115,9 @@ h3 {
   display: grid;
   grid-template-rows: 10% 20% 75%;
 }
+.menu_btn {
+  display: none;
+}
 .menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -609,14 +612,14 @@ h3 {
 ******************Perfect plans********************
 **************************************************/
 .perfect_plans {
-  width: 100%;
+  width: 1140px;
   height: 890px;
+  margin: 0 auto;
   background-color: #f4f4f5;
-  display: grid;
-  align-items: center;
-  justify-content: center;
   .perfect_plans_wrapper {
-    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
 }
 .perfect_plans_grid {
