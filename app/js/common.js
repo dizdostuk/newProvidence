@@ -259,3 +259,17 @@ const togglePlanClass = () => () => {
 toggleUser.addEventListener('click', togglePlanClass());
 starterPlan.addEventListener('click', togglePlanClass());
 proPlan.addEventListener('click', togglePlanClass());
+
+let menuBtn = document.querySelector('.menu_btn');
+let menuBtnClicked = false;
+menuBtn.addEventListener('click', () => {
+  if(menuBtnClicked === true) {
+    menuBtn.classList.remove('menu_btn_new');
+    menuBtn.style.transform = 'rotate(90deg)';
+    menuBtnClicked = false;
+    return;
+  }
+  menuBtn.classList.add('menu_btn_new');
+  menuBtnClicked = true;
+  return;
+});
