@@ -55,8 +55,9 @@
   }
   .menu_btn {
     display: block;
-    top: 20px;
+    top: 40px;
     right: 20px;
+    z-index: 6;
   }
   .menu_btn::before,
   .menu_btn::after {
@@ -82,11 +83,32 @@
   .menu_btn::after {
     top: 10px;
   }
+  /***********************
+  *** Menu btn effects ***
+  ***********************/
+  .menu_btn_new::before {
+    content: '';
+    opacity: 0;
+  }
+  .menu_btn_rotate {
+    transform: rotate(45deg);
+  }
+  .menu_btn_rotate::after {
+    content: '';
+    transform: rotate(-90deg);
+    top: 0;
+  }
+  /***************************/
 
   .menu {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 15% 42% 42%;
     grid-template-columns: none;
     background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    margin-left: -600px;
+    transition: margin-left 0.4s ease;
   }
   .menu__logo {
     grid-row-start: 1;
@@ -95,6 +117,17 @@
   .menu__right_menu {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: none;
+  }
+  .menu_left_menu_item,
+  .menu_right_menu_item {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #dedede;
+  }
+  .menu_right_menu_item:last-child {
+    width: 133px;
+    border-bottom: none;
   }
   .mainTitle {
     text-align: center;
@@ -110,4 +143,62 @@
   .header_phone {
     display: none;
   }
+  /**********************
+  *** Features **********
+  **********************/
+  .features {
+    height: 100vh;
+  }
+  .features > .container {
+    width: 80%;
+    display: block;
+  }
+  .features_grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+  }
+  .feature__first, .feature__second {
+    margin-top: 0;
+  }
+  /*******************************
+  ******** Phone feature *********
+  *******************************/
+  .phone_feature {
+    width: 100%;
+    height: 100vh;
+  }
+  .phone_feature > .container {
+    width: 80%;
+  }
+  .phone_feature_right_info {
+    width: 100%;
+    p {
+      width: 100%;
+    }
+  }
+  .btn_accent,
+  .btn_addition {
+    display: block;
+    width: 215px;
+  }
+  .btn_addition {
+    margin-top: 10px;
+  }
+  .map_feature {
+    width: 100%;
+  }
+  .map_feature > .container {
+    width: 80%;
+  }
+  .map_feature_left_info {
+    width: 100%;
+    top: 50px;
+    p {
+      width: 100%;
+    }
+  }
+  .partners_logo {
+    grid-template-columns: none !important;
+  } 
+
 }
