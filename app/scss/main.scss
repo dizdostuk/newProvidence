@@ -612,14 +612,15 @@ h3 {
 ******************Perfect plans********************
 **************************************************/
 .perfect_plans {
-  width: 1140px;
+  width: 100%;
   height: 890px;
-  margin: 0 auto;
   background-color: #f4f4f5;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   .perfect_plans_wrapper {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    width: 1140px;
+    margin: 0 auto;
   }
 }
 .perfect_plans_grid {
@@ -686,6 +687,7 @@ h3 {
 .perfect_plans_ways_grid {
   display: grid;
   grid-template-columns: 42% 42%;
+  align-items: center;
 }
 .perfect_plan_active {
   height: 650px !important;
@@ -695,6 +697,7 @@ h3 {
 }
 .perfect_plan_starter, .perfect_plan_premium {
   width: 340px;
+  height: 620px;
   background-color: #ebebed;
   border-radius: 20px;
   display: flex;
