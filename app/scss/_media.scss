@@ -208,6 +208,7 @@
   /******************************
   ******** Phone Screens ********
   ******************************/
+
   .phone_screens {
     height: 1360px;
     display: block;
@@ -217,6 +218,11 @@
   }
   .phone_screens__slider {
     height: 750px;
+    background-size: 312px;
+  }
+  .slide-img {
+    width: 266px !important;
+    height: 471px!important;
   }
   .phone_screens__header_text h2 {
     font-size: 32px;
@@ -224,20 +230,20 @@
   .special_offer {
     margin-top: 50px;
     h2 {
-      font-size: 32px;
+      font-size: 26px;
       width: 390px;
     }
   }
   .special_offer form {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   .special_offer form input[type=text] {
-    width: 205px;
+    width: 198px;
   }
   .special_offer form button {
     padding: 5px 28px 5px 12px;
-    background-position: 81px 9px;
+    background-position: 74px 9px;
     font-size: 12px;
   }
   /************************************
@@ -245,6 +251,113 @@
   ************************************/
   .feedback_sliderwrapper {
     overflow: hidden;
+  }
+  .feedback_content1 h2 {
+    font-size: 26px;
+
+  }
+  .feedback_content1 p {
+    font-size: 16px;
+    width: 255px;
+  }
+  /************************************
+  ********** Perfect Plans ************
+  ************************************/
+  .perfect_plans {
+    display: block;
+    height: auto;
+  }
+  .perfect_plans_text_wrapper {
+    h2 {
+      font-size: 26px;
+    }
+    .toggle_user {
+      margin-bottom: 15px;
+    }
+    p {
+      width: 250px;
+      font-size: 16px;
+    }
+  }
+  .perfect_plans .perfect_plans_wrapper {
+    width: 90%;
+    padding: 20px 0;
+  }
+  .perfect_plans_grid {
+    display: block;
+  }
+  .perfect_plans_text {
+    margin-bottom: 20px;
+  }
+  .perfect_plans_ways_grid {
+    display: block;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .perfect_plan_premium, .perfect_plan_starter {
+    width: 170px;
+    height: 270px;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    p {
+      font-size: 12px;
+      width: 110px;
+      margin: 15px auto 0 auto;
+    }
+  }
+  .plan_name {
+    font-size: 21px;
+    margin: 15px 0 0;
+  }
+  .plan_price {
+    padding: 3px 12px;
+    font-size: 12px;
+  }
+  .plan_lists {
+    font-size: 12px;
+    margin: 15px 0;
+    height: auto;
+    .plan_advantages {
+      margin-bottom: 0;
+    }
+  }
+  .plan_buy_now {
+    margin-top: 15px;
+    padding: 5px 20px;
+    font-size: 13px;
+  }
+  .perfect_plan_active {
+    height: 300px !important;
+    padding-top: 15px;
+  }
+  /************************************
+  ******** Footer *********************
+  ************************************/
+  .footer_wrapper {
+    grid-template-rows: 75% 50%;
+    grid-template-columns: none;
+    grid-gap: 15px;
+    width: 90%;
+    padding-top: 50px;
+  }
+  .footer_left {
+    margin: 0 auto;
+    grid-row-start: 2;
+    text-align: center;
+    > .appstore {
+      margin: 0;
+      > a {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .footer_map {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5px;
   }
 
 }
