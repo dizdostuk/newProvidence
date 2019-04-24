@@ -273,7 +273,7 @@ menuBtn.addEventListener('click', () => {
   }
   menuBtn.classList.add('menu_btn_rotate');
   menuBtn.classList.add('menu_btn_new');
-  document.querySelector('.menu').style.marginLeft = '0px';
+  document.querySelector('.menu').style.left = '0px';
   menuBtnClicked = true;
   return;
 });

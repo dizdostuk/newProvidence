@@ -100,7 +100,7 @@ h3 {
   background-position: 0;
   position: relative;
   top: 0;
-  z-index: 1;
+  z-index: 999;
 }
 .header::before {
   content: "";
@@ -159,24 +159,17 @@ h3 {
 
 .mainTitle {
   margin-top: 60px;
-  display: grid;
-  grid-template-rows: 10% 1fr 10%;
-  align-items: center;
-  justify-items: center;
-  grid-row-gap: 15px;
-}
-.mainTitle__title {
   h1 {
     font-size: 62px;
     color: $links;
     margin-bottom: 80px;
   }
+  p {
+    align-self: center;
+    text-align: center;
+  }
 }
-.mainTitle__paragraph {
-  align-self: center;
-  text-align: center;
-  width: 770px;
-}
+
 .video_btn {
   padding: 10px 30px 10px 50px;
   background-image: url(../img/playicon.png);
