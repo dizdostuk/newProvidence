@@ -137,9 +137,18 @@
   .mainTitle {
     text-align: center;
     width: 300px;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
+    margin-top: 80px;
     h1 {
       font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 300px;
+
+    }
+    .mainTitle__videobtn {
+      margin-top: 20px;
     }
   }
   
@@ -217,12 +226,21 @@
     grid-gap: 0px;
   }
   .phone_screens__slider {
+    width: 309px;
     height: 750px;
     background-size: 312px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
   .slide-img {
     width: 266px !important;
     height: 471px!important;
+    margin-top: -3px;
+  }
+  .nav_btns {
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
   .phone_screens__header_text h2 {
     font-size: 32px;
@@ -358,6 +376,9 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 5px;
+  }
+  .socials {
+    justify-content: center;
   }
 
 }
