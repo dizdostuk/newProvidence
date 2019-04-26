@@ -71,7 +71,7 @@
   .menu_btn,
   .menu_btn::before,
   .menu_btn::after {
-    position: absolute;
+    position: fixed;
     width: 40px;
     height: 4px;
     transition-timing-function: ease;
@@ -137,7 +137,8 @@
   .mainTitle {
     text-align: center;
     width: 300px;
-    margin: 0 auto;
+    justify-content: center;
+    margin-left: 25px;
     margin-top: 80px;
     h1 {
       font-size: 32px;
@@ -248,16 +249,22 @@
   .special_offer {
     margin-top: 50px;
     h2 {
-      font-size: 26px;
-      width: 390px;
+      font-size: 22px;
+      width: 100%;
     }
   }
+  .header_text__small {
+    font-size: 12px;
+  }
   .special_offer form {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
+  .special_form_first_input {
+    width: 175px !important;
+  }
   .special_offer form input[type=text] {
-    width: 198px;
+    width: 130px;
   }
   .special_offer form button {
     padding: 5px 28px 5px 12px;
@@ -287,7 +294,7 @@
   }
   .perfect_plans_text_wrapper {
     h2 {
-      font-size: 26px;
+      font-size: 22px;
     }
     .toggle_user {
       margin-bottom: 15px;
@@ -310,7 +317,7 @@
   .perfect_plans_ways_grid {
     display: block;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
   }
 
   .perfect_plan_premium, .perfect_plan_starter {
