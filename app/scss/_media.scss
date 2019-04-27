@@ -51,6 +51,7 @@
     font-size: 32px;
   }
   .header {
+    max-width: 576px;
     height: 600px;
   }
   .container {
@@ -71,7 +72,7 @@
   .menu_btn,
   .menu_btn::before,
   .menu_btn::after {
-    position: fixed;
+    position: absolute;
     width: 40px;
     height: 4px;
     transition-timing-function: ease;
@@ -136,13 +137,12 @@
   }
   .mainTitle {
     text-align: center;
-    width: 300px;
-    justify-content: center;
-    margin-left: 25px;
     margin-top: 80px;
     h1 {
       font-size: 32px;
       margin-bottom: 20px;
+      width: 300px;
+      margin: 0 auto;
     }
     p {
       width: 300px;
@@ -307,6 +307,7 @@
   .perfect_plans .perfect_plans_wrapper {
     width: 90%;
     padding: 20px 0;
+    margin-right: 0;
   }
   .perfect_plans_grid {
     display: block;
