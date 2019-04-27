@@ -5,8 +5,9 @@
 let slideNow = 1,
   slideActiveBtnCount = 1,
   slideCount = $("#slidewrapper").children().length,
+  slides = $("#slidewrapper").children(),
   translateWidth = 0,
-  slideInterval = 4000,
+  slideInterval = 1000,
   navBtnId = 0,
   prevClickBtn = 0;
 
@@ -22,6 +23,10 @@ function nextSlide() {
    */
   let removeActiveSlideBtn = $(".slide_nav_btn").get(slideNow - 1);
   removeActiveSlideBtn.classList.remove("slide_active_btn");
+
+  
+  
+
 
   /**
    * Slide to next slide

@@ -45,6 +45,9 @@
 @include media-breakpoint-up(xl) {
 	
 }
+@media only screen and (max-device-width: 768px) {
+
+}
 
 @media only screen and (max-device-width: 576px) {
   h1 {
@@ -366,6 +369,7 @@
     grid-template-columns: none;
     grid-gap: 15px;
     width: 90%;
+    margin: 0 auto;
     padding-top: 50px;
   }
   .footer_left {
