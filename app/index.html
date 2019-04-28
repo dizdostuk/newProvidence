@@ -32,6 +32,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
   </head>
 
   <body>
@@ -170,7 +172,6 @@
       </div>
 
       <div class="phone_screens__slider">
-        <div class="viewport">
           <div id="slidewrapper" class="slidewrap">
             <div class="slide">
               <img class="slide-img" src="img/phoneinner1.png" alt="Phone" />
@@ -188,15 +189,6 @@
               <img class="slide-img" src="img/phoneinner5.png" alt="Phone" />
             </div>
           </div>
-
-          <div class="nav_btns">
-            <div class="slide_nav_btn slide_active_btn"></div>
-            <div class="slide_nav_btn"></div>
-            <div class="slide_nav_btn"></div>
-            <div class="slide_nav_btn"></div>
-            <div class="slide_nav_btn"></div>
-          </div>
-        </div>
       </div>
 
       <div class="special_offer">
@@ -218,37 +210,54 @@
 
     <div class="feedbacks">
       <div class="feedback_viewport">
-        <div class="feedback_sliderwrapper">
-          <div class="feedoverlay feedback_active_img">
-            <img
-              src="img/feedback1.png"
-              alt="Feedback1"
-              class="feedback_slide"
-            />
-            <div class="idfordel"></div>
+        <div class="feedback_content1">
+          <img
+            src="img/feedback1.png"
+            alt="Feedback1"
+            class="feedback_slide"
+          />
+          <h2 class="feedback_h2">New Providence is the great UI kit</h2>
+          <p class="feedback_paragraph">
+            “Just then her head struck against the roof of the hall: in fact she
+            was now more than nine feet high, and she at once took up the little
+            golden key and hurried off to the garden door.”
+          </p>
+          <div class="feedback_stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
           </div>
-          <div class="feedoverlay">
-            <img
-              src="img/feedback2.png"
-              alt="Feedback2"
-              class="feedback_slide"
-            />
-            <div class="idfordel feedback_overlay"></div>
-          </div>
-          <div class="feedoverlay">
-            <img
-              src="img/feedback3.png"
-              alt="Feedback3"
-              class="feedback_slide"
-            />
-            <div class="idfordel feedback_overlay"></div>
-          </div>
-        </div>
-        <div class="feedbackslide_btns">
-          <div class="prev_btn"></div>
-          <div class="next_btn"></div>
+          <span class="feedback_name"><b class="feedback_name_b">Cameron Dowman</b></span>
         </div>
         <div class="feedback_content1">
+          <img
+            src="img/feedback2.png"
+            alt="Feedback2"
+            class="feedback_slide"
+          />
+          <h2 class="feedback_h2">New Providence is the great UI kit</h2>
+          <p class="feedback_paragraph">
+            “Just then her head struck against the roof of the hall: in fact she
+            was now more than nine feet high, and she at once took up the little
+            golden key and hurried off to the garden door.”
+          </p>
+          <div class="feedback_stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <span class="feedback_name"><b class="feedback_name_b">Cameron Dowman</b></span>
+        </div>
+        <div class="feedback_content1">
+          <img
+            src="img/feedback3.png"
+            alt="Feedback3"
+            class="feedback_slide"
+          />
           <h2 class="feedback_h2">New Providence is the great UI kit</h2>
           <p class="feedback_paragraph">
             “Just then her head struck against the roof of the hall: in fact she
@@ -372,9 +381,6 @@
         </div>
       </div>
     </div>
-
-
-    <script src="js/feedbacks.json"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

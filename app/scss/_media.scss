@@ -236,16 +236,25 @@
     margin: 0 auto;
     margin-top: 30px;
   }
-  .slide-img {
-    width: 266px !important;
-    height: 471px!important;
-    margin-top: -3px;
+  .slidewrap {
+    top: 75px;
+    left: 25px;
+    width: 263px !important;
   }
-  .nav_btns {
-    width: 260px;
-    margin: 0 auto;
-    margin-top: 10px;
+  .slide-img{
+    width: 270px;
+
   }
+  // .slide-img {
+  //   width: 266px !important;
+  //   height: 471px!important;
+  //   margin-top: -3px;
+  // }
+  // .nav_btns {
+  //   width: 260px;
+  //   margin: 0 auto;
+  //   margin-top: 10px;
+  // }
   .phone_screens__header_text h2 {
     font-size: 32px;
   }
@@ -282,11 +291,17 @@
   }
   .feedback_content1 h2 {
     font-size: 26px;
-
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
   }
   .feedback_content1 p {
     font-size: 16px;
     width: 255px;
+    margin: 20px auto;
+  }
+  .feedback_stars {
+    margin-bottom: 20px !important;
   }
   /************************************
   ********** Perfect Plans ************
